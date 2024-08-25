@@ -131,6 +131,7 @@
     <Compile Include="Processors\Dispel.cs" />
     <Compile Include="Processors\GiveMe.cs" />
     <Compile Include="Processors\Inventory.cs" />
+    <Compile Include="Processors\Hoard.cs" />
     <Compile Include="Processors\Movement.cs" />
     <Compile Include="Processors\Nukes.cs" />
     <Compile Include="Processors\PrivateCode.cs" />
@@ -176,6 +177,7 @@
     <Compile Include="Settings\FeatureSettings\DoorDataFile.cs" />
     <Compile Include="Settings\FeatureSettings\GlobalIfs.cs" />
     <Compile Include="Settings\FeatureSettings\LazarusSymbolDataFile.cs" />
+    <Compile Include="Settings\FeatureSettings\HoardDataFile.cs" />
     <Compile Include="Settings\FeatureSettings\LootDataFile.cs" />
     <Compile Include="Settings\FeatureSettings\SavedGroupDataFile.cs" />
     <Compile Include="Settings\FeatureSettings\SpellAliasDataFile.cs" />

@@ -457,7 +457,7 @@ namespace E3Core.Processors
 
                 if(x.args.Count==0)
                 {
-					MQ.Write("Isussing shutdown, setting process to false.");
+					MQ.Write("Issuing shutdown, setting process to false.");
 					Core.IsProcessing = false;
 					System.Threading.Thread.MemoryBarrier();
                     throw new ThreadAbort();

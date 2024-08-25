@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using static System.Collections.Specialized.BitVector32;
 
 
 namespace E3Core.Settings
@@ -57,7 +58,18 @@ namespace E3Core.Settings
         public Boolean Loot_OnlyStackableEnabled = false;
 		public bool Loot_OnlyStackableHonorLootFileSkips = false;
 		public Int32 Loot_TimeToWaitAfterAssist = 2000;
-        
+
+        public String Hoard_HoarderofCoins;
+        public String Hoard_HoarderofGems;
+        public String Hoard_HoarderofOre;
+        public String Hoard_HoarderofSilks;
+        public String Hoard_HoarderofHides;
+        public String Hoard_HoarderofFood;
+        public String Hoard_HoarderofPowder;
+        public String Hoard_HoarderofVenom;
+        public String Hoard_HoarderofAlchemy;
+        public String Hoard_HoarderofTinkerer;
+        public String Hoard_HoarderofOther;
 
         public Boolean Assists_AutoAssistEnabled=false;
         public Int32 Assists_MaxEngagedDistance=250;
@@ -194,7 +206,21 @@ namespace E3Core.Settings
             LoadKeyData("Loot", "Loot Only Stackable: Loot common tradeskill items ie:pelts ores silks etc (On/Off)", parsedData, ref Loot_OnlyStackableOnlyCommonTradeSkillItems);
             LoadKeyData("Loot", "Loot Only Stackable: Always Loot Item", parsedData, Loot_OnlyStackableAlwaysLoot);
             LoadKeyData("Loot", "Loot Only Stackable: Honor Loot File Skip Settings (On/Off)", parsedData, ref Loot_OnlyStackableHonorLootFileSkips);
-        
+
+            //Hoard
+            LoadKeyData("Hoard", "Hoarder of Coins", parsedData, ref Hoard_HoarderofCoins);
+            LoadKeyData("Hoard", "Hoarder of Gems", parsedData, ref Hoard_HoarderofGems);
+            LoadKeyData("Hoard", "Hoarder of Ore", parsedData, ref Hoard_HoarderofOre);
+            LoadKeyData("Hoard", "Hoarder of Silks", parsedData, ref Hoard_HoarderofSilks);
+            LoadKeyData("Hoard", "Hoarder of Hides", parsedData, ref Hoard_HoarderofHides);
+            LoadKeyData("Hoard", "Hoarder of Food", parsedData, ref Hoard_HoarderofFood);
+            LoadKeyData("Hoard", "Hoarder of Powder", parsedData, ref Hoard_HoarderofPowder);
+            LoadKeyData("Hoard", "Hoarder of Venom", parsedData, ref Hoard_HoarderofVenom);
+            LoadKeyData("Hoard", "Hoarder of Alchemy", parsedData, ref Hoard_HoarderofAlchemy);
+            LoadKeyData("Hoard", "Hoarder of Tinkerer", parsedData, ref Hoard_HoarderofTinkerer);
+            LoadKeyData("Hoard", "Hoarder of Other", parsedData, ref Hoard_HoarderofOther);
+
+
             LoadKeyData("Manastone", "NumerOfClicksPerLoop", parsedData, ref ManaStone_NumerOfClicksPerLoop);
             LoadKeyData("Manastone", "NumberOfLoops", parsedData, ref ManaStone_NumberOfLoops);
             LoadKeyData("Manastone", "DelayBetweenLoops (in milliseconds)", parsedData, ref ManaStone_DelayBetweenLoops);
@@ -359,6 +385,20 @@ namespace E3Core.Settings
             section.Keys.AddKey("Loot Only Stackable: Loot all Tradeskill items (On/Off)", "Off");
             section.Keys.AddKey("Loot Only Stackable: Honor Loot File Skip Settings (On/Off)", "Off");
             section.Keys.AddKey("LootItemDelay", "300");
+            //Hoard
+            newFile.Sections.AddSection("Hoard");
+            section = newFile.Sections.GetSectionData("Hoard");
+            section.Keys.AddKey("Hoarder of Coins", "BOT");
+            section.Keys.AddKey("Hoarder of Gems", "BOT");
+            section.Keys.AddKey("Hoarder of Ore", "BOT");
+            section.Keys.AddKey("Hoarder of Silks", "BOT");
+            section.Keys.AddKey("Hoarder of Hides", "BOT");
+            section.Keys.AddKey("Hoarder of Food", "BOT");
+            section.Keys.AddKey("Hoarder of Powder", "BOT");
+            section.Keys.AddKey("Hoarder of Venom", "BOT");
+            section.Keys.AddKey("Hoarder of Alchemy", "BOT");
+            section.Keys.AddKey("Hoarder of Tinkerer", "BOT");
+            section.Keys.AddKey("Hoarder of Other", "BOT");
 
             //Manastone
             newFile.Sections.AddSection("Manastone");

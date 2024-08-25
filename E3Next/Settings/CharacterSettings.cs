@@ -94,7 +94,9 @@ namespace E3Core.Settings
 		public bool Misc_AutoMedBreak;
 		[INI_Section("Misc", "Auto-Loot (On/Off)")]
 		public bool Misc_AutoLootEnabled;
-		[INI_Section("Misc", "Debuffs/Dots are visible")]
+        [INI_Section("Misc", "Auto-Hoard (On/Off)")]
+        public bool Misc_AutoHoardEnabled;
+        [INI_Section("Misc", "Debuffs/Dots are visible")]
 		public bool Misc_VisibleDebuffsDots=true;
 
 		[INI_Section("Misc", "Anchor (Char to Anchor to)")]
@@ -612,6 +614,7 @@ namespace E3Core.Settings
             LoadKeyData("Misc", "End MedBreak in Combat(On/Off)", ParsedData, ref Misc_EndMedBreakInCombat);
             LoadKeyData("Misc", "AutoMedBreak (On/Off)", ParsedData, ref Misc_AutoMedBreak);
             LoadKeyData("Misc", "Auto-Loot (On/Off)", ParsedData, ref Misc_AutoLootEnabled);
+            LoadKeyData("Misc", "Auto-Hoard (On/Off)", ParsedData, ref Misc_AutoHoardEnabled);
             LoadKeyData("Misc", "Anchor (Char to Anchor to)", ParsedData, ref Misc_AnchorChar);
             LoadKeyData("Misc", "Remove Torpor After Combat", ParsedData, ref Misc_RemoveTorporAfterCombat);
             LoadKeyData("Misc", "Auto-Forage (On/Off)", ParsedData, ref Misc_AutoForage);
